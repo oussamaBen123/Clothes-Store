@@ -11,7 +11,7 @@ const styles = {
    background:"linear-gradient(45deg, #2f4680, #500ae4)",
    boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)"
 }
-const apiKey = 
+const apiKey = import.meta.env.VITE_WEATHER_KEY
 
 function handleClick(){
    if(searchInp.trim().toLowerCase() !== ""){
