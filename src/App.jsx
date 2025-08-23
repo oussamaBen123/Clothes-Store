@@ -1,12 +1,37 @@
-import WeatherApp from './Myfiles/firstTry'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from "./NavBar";
+import Login from "./LoginForm";
+import SignUp from "./SignUp";
+import Global from "./home/GlobalHome";
+import CollectionProduct from "./collection/CollectionProduct";
+import Footer from "./Footer";
+import Basket from "./Basket";
+import PlaceOrder from "./PlaceOrder";
+
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import ProductPage from "./ProductDetails/ProductDetails";
 
 function App() {
- 
   return (
-    <div className='container  w-full h-screen bg-[#e2d4ff] flex justify-center items-center'>
-      <WeatherApp/>
-    </div>
-  )
+    <>
+      <NavBar />
+
+      <Routes>
+        <Route path="/" element={<Global/>}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/collection" element={<CollectionProduct/>}/>
+        <Route path="/cart" element={<Basket/>}/>
+        <Route path="/place-order" element={<PlaceOrder/>}/>
+        <Route path="productDetails/:ProductId" element={<ProductPage/>}/>
+      </Routes>
+    
+    <Footer/>
+  <ToastContainer />
+
+    </>
+  );
 }
 
-export default App
+export default App;

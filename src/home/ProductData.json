@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1,
+    "image": "../img/p_img1.png",
+    "productTitle": "Kid Tapered Slim Fit Trouser",
+    "price": "38"
+  },
+  {
+    "id": 2,
+    "image": "../img/p_img2.png",
+    "productTitle": "Men Round Neck Pure Cotton T-shirt",
+    "price": "38"
+  },
+  {
+    "id": 3,
+    "image": "../img/p_img3.png",
+    "productTitle": "Kid Tapered Slim Fit Trouser",
+    "price": "64"
+  },
+  {
+    "id": 4,
+    "image": "../img/p_img4.png",
+    "productTitle": "Boy Round Neck Pure Cotton T-shirt",
+    "price": "60"
+  },
+  {
+    "id": 5,
+    "image": "../img/p_img5.png",
+    "productTitle": "Women Zip-Front Relaxed Fit Jacket",
+    "price": "74"
+  },
+  {
+    "id": 6,
+    "image": "../img/p_img5.png",
+    "productTitle": "Men Tapered Fit Flat-Front Trousers",
+    "price": "58"
+  },
+  {
+    "id": 7,
+    "image": "../img/p_img11.png",
+    "productTitle": "Women Zip-Front Relaxed Fit Jacket",
+    "price": "86"
+  },
+  {
+    "id": 8,
+    "image": "../img/p_img8.png",
+    "productTitle": "Kid Tapered Slim Fit Trouser",
+    "price": "96"
+  },
+  {
+    "id": 9,
+    "image": "../img/p_img9.png",
+    "productTitle": "Men Printed Plain Cotton Shirt",
+    "price": "100"
+  },
+  {
+    "id": 10,
+    "image": "../img/p_img10.png",
+    "productTitle": "Women Zip-Front Relaxed Fit Jacket",
+    "price": "20"
+  },
+  {
+    "id": 11,
+    "image": "../img/p_img15.png",
+    "productTitle": "Women Round Neck Cotton Top",
+    "price": "40"
+  },
+  {
+    "id": 12,
+    "image": "../img/p_img16.png",
+    "productTitle": "Girls Round Neck Cotton Top",
+    "price": "38"
+  },
+  {
+    "id": 13,
+    "image": "../img/p_img17.png",
+    "productTitle": "Men Slim Fit Relaxed Denim Jacket",
+    "price": "72"
+  },
+  {
+    "id": 14,
+    "image": "../img/p_img18.png",
+    "productTitle": "Women Zip-Front Relaxed Fit Jacket",
+    "price": "82"
+  },
+  {
+    "id": 15,
+    "image": "../img/p_img19.png",
+    "productTitle": "Men Tapered Fit Flat-Front Trousers",
+    "price": "63"
+  },
+  {
+    "id": 16,
+    "image": "../img/p_img20.png",
+    "productTitle": "Men Round Neck Pure Cotton T-shirt",
+    "price": "26"
+  },
+  {
+    "id": 17,
+    "image": "../img/p_img21.png",
+    "productTitle": "Men Round Neck Pure Cotton T-shirt",
+    "price": "68"
+  },
+  {
+    "id": 18,
+    "image": "../img/p_img22.png",
+    "productTitle": "Boy Round Neck Pure Cotton T-shirt",
+    "price": "28"
+  },
+  {
+    "id": 19,
+    "image": "../img/p_img23.png",
+    "productTitle": "Women Round Neck Cotton Top",
+    "price": "38"
+  },
+  {
+    "id": 20,
+    "image": "../img/p_img24.png",
+    "productTitle": "Men Slim Fit Relaxed Denim Jacket",
+    "price": "80"
+  },
+  {
+    "id": 21,
+    "image": "../img/p_img25.png",
+    "productTitle": "Kid Tapered Slim Fit Trouser",
+    "price": "60"
+  },
+  {
+    "id": 22,
+    "image": "../img/p_img26.png",
+    "productTitle": "Women Round Neck Cotton Top",
+    "price": "42"
+  },
+  {
+    "id": 23,
+    "image": "../img/p_img27.png",
+    "productTitle": "Men Round Neck Pure Cotton T-shirt",
+    "price": "34"
+  },
+  {
+    "id": 24,
+    "image": "../img/p_img28.png",
+    "productTitle": "Girls Round Neck Cotton Top",
+    "price": "40"
+  },
+  {
+    "id": 25,
+    "image": "../img/p_img29.png",
+    "productTitle": "Women Round Neck Cotton Top",
+    "price": "45"
+  },
+  {
+    "id": 26,
+    "image": "../img/p_img30.png",
+    "productTitle": "Women Palazzo Pants with Waist Belt",
+    "price": "67"
+  },
+  {
+    "id": 27,
+    "image": "../img/p_img31.png",
+    "productTitle": "Girls Round Neck Cotton Top",
+    "price": "50"
+  },
+  {
+    "id": 28,
+    "image": "../img/p_img32.png",
+    "productTitle": "Men Slim Fit Relaxed Denim Jacket",
+    "price": "84"
+  },
+  {
+    "id": 29,
+    "image": "../img/p_img33.png",
+    "productTitle": "Men Round Neck Pure Cotton T-shirt",
+    "price": "48"
+  },
+  {
+    "id": 30,
+    "image": "../img/p_img34.png",
+    "productTitle": "Women Zip-Front Relaxed Fit Jacket",
+    "price": "78"
+  },
+  {
+    "id": 31,
+    "image": "../img/p_img35.png",
+    "productTitle": "Girls Round Neck Cotton Top",
+    "price": "48"
+  },
+  {
+    "id": 32,
+    "image": "../img/p_img36.png",
+    "productTitle": "Men Round Neck Pure Cotton T-shirt",
+    "price": "46"
+  },
+  {
+    "id": 33,
+    "image": "../img/p_img37.png",
+    "productTitle": "Girls Round Neck Cotton Top",
+    "price": "42"
+  },
+  {
+    "id": 34,
+    "image": "../img/p_img38.png",
+    "productTitle": "Boy Round Neck Pure Cotton T-shirt",
+    "price": "36"
+  },
+  {
+    "id": 35,
+    "image": "../img/p_img39.png",
+    "productTitle": "Girls Round Neck Cotton Top",
+    "price": "60"
+  },
+  {
+    "id": 36,
+    "image": "../img/p_img40.png",
+    "productTitle": "Men Round Neck Pure Cotton T-shirt",
+    "price": "54"
+  },
+  {
+    "id": 37,
+    "image": "../img/p_img41.png",
+    "productTitle": "Women Palazzo Pants with Waist Belt",
+    "price": "52"
+  },
+  {
+    "id": 38,
+    "image": "../img/p_img42.png",
+    "productTitle": "Girls Round Neck Cotton Top",
+    "price": "64"
+  }
+]

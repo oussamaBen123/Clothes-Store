@@ -6,7 +6,9 @@
   src:url("../src/assets/fonts/Poppins-Regular.ttf")
 }
 @theme{
-  --font-poppins:poppins,"sans serif"
+  --font-poppins:poppins,"sans-serif";
+  --font-prata:prata,"serif";
+  --font-outfit:"Outfit", "sans-serif";
 }
 
 *{
@@ -14,4 +16,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
