@@ -2,7 +2,8 @@ import { useContext } from "react"
 import { InfosContext } from "./LatestCollection"
 import CardPrd from "../CardProduct";
 import BeforeLast from "./BeforeLast";
-import datas from "../home/ProductData.json";
+import datas from "../ProductData.json";
+import { NavLink } from "react-router-dom";
 export default function BestSeller() {
   const infos = useContext(InfosContext)
   const { word1, word2 } = infos[1];
@@ -23,16 +24,20 @@ export default function BestSeller() {
         </p>
       </div>
 
-      <div className="flex gap-4">
-        {datas.slice(0, 5).map((data, i) => (
-          <CardPrd
-            key={i}
-            image={data.image}
-            description={data.productTitle}
-            price={data.price}
-          />
-        ))}
-      </div>
+    <div className="flex gap-4">
+  {datas.slice(0, 5).map((data) => {
+    return (
+      <NavLink key={data.id} to={`productDetails/${data.id}`}>
+        <CardPrd
+          image={data.image}
+          description={data.productTitle}
+          price={data.price}
+        />
+      </NavLink>
+    );
+  })}
+</div>
+
 
     </div>
   );

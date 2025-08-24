@@ -1,7 +1,8 @@
-import datas from "../home/ProductData.json";
+import datas from "../ProductData.json";
 import CardPrd from "../CardProduct";
 import { useState } from "react";
 import Search from "./Search";
+import { NavLink } from "react-router-dom";
 export default function CollectionProduct() {
   const [selectInp, setSelectInp] = useState({
     men: false,
@@ -88,7 +89,7 @@ export default function CollectionProduct() {
               <input
                 checked={selectInp.kids}
                 onChange={(e) => {
-                  setSelectInp({ ...selectInp, kids: e.target.checked });
+                  setSelectInp({...selectInp, kids: e.target.checked });
                 }}
                 type="checkbox"
               />
@@ -137,15 +138,18 @@ export default function CollectionProduct() {
             </select>
           </div>
           <div className="grid grid-cols-4 gap-y-[20px] gap-x-2.5">
-            {filterP.map((data, index) => {
+            {filterP.map((data) => {
               return (
-                <CardPrd
-                  key={index}
-                  image={data.image}
-                  description={data.productTitle}
-                  price={data.price}
-                  height="220px"
-                />
+                
+                <NavLink key={data.id} to={`/productDetails/${data.id}`}>
+                  <CardPrd
+                    image={data.image}
+                    description={data.productTitle}
+                    price={data.price}
+                    height="220px"
+                  />
+                </NavLink>  
+                
               );
             })}
           </div>

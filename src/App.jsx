@@ -7,7 +7,6 @@ import CollectionProduct from "./collection/CollectionProduct";
 import Footer from "./Footer";
 import Basket from "./Basket";
 import PlaceOrder from "./PlaceOrder";
-
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import ProductPage from "./ProductDetails/ProductDetails";
@@ -24,7 +23,7 @@ function App() {
         <Route path="/collection" element={<CollectionProduct/>}/>
         <Route path="/cart" element={<Basket/>}/>
         <Route path="/place-order" element={<PlaceOrder/>}/>
-        <Route path="productDetails/:ProductId" element={<ProductPage/>}/>
+        <Route path="/productDetails/:ProductId" element={<ProductPage/>}/>
       </Routes>
     
     <Footer/>

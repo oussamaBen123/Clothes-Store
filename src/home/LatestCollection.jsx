@@ -1,5 +1,5 @@
 import CardPrd from "../CardProduct";
-import datas from "../home/ProductData.json"
+import datas from "../ProductData.json"
 import BestSeller from "./BestSeller";
 import { createContext,useState } from "react";
 import {NavLink} from 'react-router-dom'
@@ -25,7 +25,7 @@ export default function LatestCollection(){
                datas.slice(0,10).map((data)=>{
                   return(
                   <>
-                  <NavLink key={data.id} to={`productDetails/${data.id}`}>
+                  <NavLink key={data.id} to={`/productDetails/${data.id}`}>
                      <CardPrd image={data.image} description={data.productTitle} price={data.price} width="190px" height="250px"/>
                   </NavLink>
                   </>
