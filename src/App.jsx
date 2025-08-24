@@ -10,6 +10,7 @@ import PlaceOrder from "./PlaceOrder";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import ProductPage from "./ProductDetails/ProductDetails";
+import NotFound from "./Error404";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/cart" element={<Basket/>}/>
         <Route path="/place-order" element={<PlaceOrder/>}/>
         <Route path="/productDetails/:ProductId" element={<ProductPage/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     
     <Footer/>
