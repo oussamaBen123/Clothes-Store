@@ -13,52 +13,75 @@ import { useCart } from "../states/zuStand";
 import ProductTabs from "./ProductTabs";
 import CardPrd from "../CardProduct";
 import { NavLink } from "react-router-dom";
+import { useCartStore } from "../states/Quantity";
+import { useSizes } from "../states/Size";
+import { useToggle } from "../states/CartProductToggle";
+import CartItem from "../CartProduct";
+import {useStore} from "../states/ProductMang"
+
 export default function ProductPage() {
+  const QtyIncrement = useCartStore((state) => state.increaseQuantity);
+  const qty = useCartStore((state) => state.quantity);
+  const showHide = useToggle((state) => state.toggle);
+  const setToggle = useToggle((state) => state.setToggle);
+  const addProduct = useStore((state) => state.addProduct);
+  const cart = useStore((state) => state.cart);
+  const updateQty = useStore((state) => state.updateQty);
 
-
-
-  const addProduct = useCart((state) => state.addProduct);
   let ProductsDatas = data;
   const { ProductId } = useParams();
 
-   useEffect(()=>{
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  })
- },[ProductId])
-
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [ProductId]);
 
   let product = ProductsDatas.find((p) => {
     return p.id == ProductId;
   });
 
-  const productCategory = product.category;
   const relatedProducts = ProductsDatas.filter((prd) => {
     return prd.id !== Number(ProductId);
   });
+  const productCategory = product.category;
 
+  const result = relatedProducts.filter((res) => {
+    return res.category === productCategory;
+  });
 
-  const result = relatedProducts.filter((res)=>{
-    return res.category === productCategory
-  })
-  
-  
-  
+  const selectedSize = useSizes((state) => state.selectedSize);
+  const setSelectedSize = useSizes((state) => state.setSelectedSize);
 
-  const [selectedSize, setSelectedSize] = useState(null);
   const sizes = ["S", "M", "L", "XL", "XXL"];
-  const [addToCart, setAddToCart] = useState(false);
-
-  function addToCartBn() {
-    if (selectedSize === null) {
-      toast.error("Please select a size !");
-    } else {
-      toast.success("Product add with success !");
-      addProduct();
-    }
+  const selectPro = {
+        id:product.id,
+        image: product.image,
+         title: product.productTitle,
+         price: product.price,
   }
+ 
+      
+                  
+      function addToCartBn() {
+        if (selectedSize === null) {
+          toast.error("Please select a size !");
+          return;
+        } 
+        
+         const newPrd = {
+         ...selectPro,
+         size:selectedSize,
+         qty:1,
+     };
+        addProduct(newPrd)
+      setToggle(true)
+      updateQty()
+      toast.success("Product add with success !");
+    }
+  
+
   return (
     <div className="flex flex-col gap-9">
       <div className=" flex !mx-[120px] gap-16 h-auto border-t-[2px] !pt-[50px] border-gray-200 !pb-[40px] !mb-[100px]">
@@ -130,18 +153,19 @@ export default function ProductPage() {
         <p className="h-[2px] w-[48px] bg-[#374151] my-2"></p>
       </div>
       <div className="related-products flex justify-center gap-2 !mb-[150px]">
-        {
-          result.slice(0,5).map((related)=>{
-            return (
-              
-              <NavLink key={related.id} to={`/productDetails/${related.id}`}>
-                     <CardPrd image={related.image} description={related.productTitle} price={related.price}height="250px"/>
-               </NavLink>
-              
-            )
-          })
-        
-        }</div>
+        {result.slice(0, 5).map((related) => {
+          return (
+            <NavLink key={related.id} to={`/productDetails/${related.id}`}>
+              <CardPrd
+                image={related.image}
+                description={related.productTitle}
+                price={related.price}
+                height="250px"
+              />
+            </NavLink>
+          );
+        })}
+      </div>
     </div>
   );
 }

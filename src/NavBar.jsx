@@ -6,10 +6,12 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { useState } from "react";
 import { PiLessThanThin } from "react-icons/pi";
 import { NavLink } from "react-router-dom";
-import { useCart } from "./states/zuStand"; // <-- import du store
+import { useStore } from "./states/ProductMang";
 export default function NavBar({onUserClick}){
 const [visibile , setVisible] = useState(false);
-  const cartVal = useCart((state)=> state.cart)
+  const cart = useStore((state) => state.cart);
+const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+
 
    return(
       <div className="nav flex justify-between items-center h-[80px] !px-[90px] sm:!px-[120px] text-[#414141]">
@@ -27,7 +29,7 @@ const [visibile , setVisible] = useState(false);
             </NavLink>
             </li>
 
-            <li className="hidden lg:inline uppercase">
+            {/* <li className="hidden lg:inline uppercase">
             <NavLink to="/about" className={({isActive})=> isActive ? "text-red-500":"text-[#414141]"}>
             about
             </NavLink>
@@ -37,7 +39,7 @@ const [visibile , setVisible] = useState(false);
             <NavLink to="/contact" className={({isActive})=> isActive ? "text-red-500":"text-[#414141]"}>
             contact
             </NavLink>
-            </li>               
+            </li>                */}
 
             <li className="hidden lg:inline text-[12px] text-[#374151] border-[1px] border-[#e4e4e4] !px-[14px] rounded-[20px] !py-[6px] ">
             <NavLink to="adminPannel" className={({isActive})=> isActive ? "text-red-500":"text-[#414141]"}>
@@ -59,7 +61,7 @@ const [visibile , setVisible] = useState(false);
       <img className="cursor-pointer h-[20px]" src={cartIcon} alt="Cart" />
     </NavLink>
     <span className="absolute top-2 -right-2 bg-black text-white text-[8px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
-      {cartVal}
+      {totalQty}
     </span>
   </div>
 </div>
