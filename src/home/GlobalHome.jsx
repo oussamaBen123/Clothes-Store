@@ -1,8 +1,7 @@
 import React from "react";
-import Contenu from "./contenu";
+import Contenu from "./Contenu";
 import BeforeLast from "./BeforeLast";
 import LatestCollection from "./LatestCollection";
-import Footer from "../Footer";
  
 export default function Global(){
 

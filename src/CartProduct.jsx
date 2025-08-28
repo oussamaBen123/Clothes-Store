@@ -1,5 +1,4 @@
 import Trash2 from "/icons/bin_icon.png";
-import { useCart } from "./states/zuStand";
 import { useCartStore } from "./states/Quantity";
 import { useSizes } from "./states/Size";
 import { useToggle } from "./states/CartProductToggle";

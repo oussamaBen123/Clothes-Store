@@ -3,20 +3,14 @@ import data from "../ProductData.json";
 import starIcon from "/icons/star_icon.png";
 import starDullIcon from "/icons/star_dull_icon.png";
 import SizeBtn from "./SizeBtn";
-import smallImg from "/img/p_img1.png";
-import mainImg from "/img/p_img1.png";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { create } from "zustand";
-import NavBar from "../NavBar";
-import { useCart } from "../states/zuStand";
 import ProductTabs from "./ProductTabs";
 import CardPrd from "../CardProduct";
 import { NavLink } from "react-router-dom";
 import { useCartStore } from "../states/Quantity";
 import { useSizes } from "../states/Size";
 import { useToggle } from "../states/CartProductToggle";
-import CartItem from "../CartProduct";
 import {useStore} from "../states/ProductMang"
 
 export default function ProductPage() {
